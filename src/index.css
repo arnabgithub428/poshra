@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #FAF6EC;
+  --surface: #FFFFFF;
+  --ink: #1F5D3A;
+  --muted: #4A4A3A;
+  --line: rgba(31, 93, 58, 0.14);
+  --sand: #F6EFDD;
+  --brand: #1F5D3A;
+}
+.dark {
+  --bg: #0F1F17;
+  --surface: #16291F;
+  --ink: #F1EBD8;
+  --muted: #B9B4A0;
+  --line: rgba(241, 235, 216, 0.16);
+  --sand: #132319;
+  --brand: #2F8A57;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-sand: var(--sand);
+  --color-brand: var(--brand);
+  --color-amber: #E0A33A;
+  --color-cream: #FAF6EC;
+  --font-sans: 'Hind Siliguri', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { @apply bg-bg text-ink font-sans; }
